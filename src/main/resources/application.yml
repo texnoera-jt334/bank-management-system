@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: bank-management-system
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/bank-management-system
+    username: postgres
+    password: postgres
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 6
+      idle-timeout: 30000
+      max-lifetime: 2000000
+      connection-timeout: 60000
+  jpa:
+    show-sql: true
+    open-in-view: true
+
+server:
+  port: 8080

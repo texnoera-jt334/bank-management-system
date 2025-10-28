@@ -1,6 +1,8 @@
 package az.banking.bankmanagementsystem.service.impl;
 
 import az.banking.bankmanagementsystem.entity.Customer;
+import az.banking.bankmanagementsystem.exception.CustomerAlreadyExistsException;
+import az.banking.bankmanagementsystem.exception.CustomerNotFoundException;
 import az.banking.bankmanagementsystem.repository.CustomerRepository;
 import az.banking.bankmanagementsystem.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +43,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Customer updateCustomer(String finCode, Customer updatedCustomer) {
         Customer existingCustomer = customerRepository.findById(finCode)
-                .orElseThrow(() -> new ustomerNotFoundException("Müştəri tapılmadı. FIN: " + finCode));
+                .orElseThrow(() -> new CustomerNotFoundException("Müştəri tapılmadı. FIN: " + finCode));
 
         existingCustomer.setName(updatedCustomer.getName());
         existingCustomer.setSurname(updatedCustomer.getSurname());
@@ -57,9 +59,6 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void deleteCustomer(String finCode) {
-        Customer existingCustomer = customerRepository.findById(finCode)
-                .orElseThrow(() -> new CustomerNotFoundException("Müştəri tapılmadı. FIN: " + finCode));
-
-        customerRepository.delete(existingCustomer);
+        customerRepository.deleteById(finCode);
     }
 }
