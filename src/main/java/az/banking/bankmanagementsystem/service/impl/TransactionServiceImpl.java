@@ -1,13 +1,14 @@
-package az.banking.bankmanagementsystem.service.Transaction;
+package az.banking.bankmanagementsystem.service.impl;
 
-import az.banking.bankmanagementsystem.DTO.Transaction.DepositeResponse;
-import az.banking.bankmanagementsystem.DTO.Transaction.DepositeRequest;
+import az.banking.bankmanagementsystem.DTO.DepositeResponse;
+import az.banking.bankmanagementsystem.DTO.DepositeRequest;
 import az.banking.bankmanagementsystem.entity.Account;
 import az.banking.bankmanagementsystem.entity.Transaction;
 import az.banking.bankmanagementsystem.enums.TransactionType;
 import az.banking.bankmanagementsystem.exception.TransactionResourceNotFoundException;
 import az.banking.bankmanagementsystem.repository.AccountRepository;
 import az.banking.bankmanagementsystem.repository.TransactionRepository;
+import az.banking.bankmanagementsystem.service.TransactionService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class TransactionDepositeService implements TransActionService{
+public class TransactionServiceImpl implements TransactionService {
      private final AccountRepository accountRepository;
      private final TransactionRepository transActionRepository;
 

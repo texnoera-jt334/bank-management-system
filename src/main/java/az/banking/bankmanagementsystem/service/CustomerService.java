@@ -1,4 +1,4 @@
-package az.banking.bankmanagementsystem.service.impl;
+package az.banking.bankmanagementsystem.service;
 
 import az.banking.bankmanagementsystem.entity.Customer;
 

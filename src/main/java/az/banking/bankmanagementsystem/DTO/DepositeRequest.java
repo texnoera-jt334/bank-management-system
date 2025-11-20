@@ -1,4 +1,4 @@
-package az.banking.bankmanagementsystem.DTO.Transaction;
+package az.banking.bankmanagementsystem.DTO;
 
 import lombok.Data;
 

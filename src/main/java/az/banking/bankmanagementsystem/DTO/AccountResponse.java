@@ -1,4 +1,4 @@
-package az.banking.bankmanagementsystem.DTO.Acount;
+package az.banking.bankmanagementsystem.DTO;
 
 import az.banking.bankmanagementsystem.enums.AccountStatus;
 import az.banking.bankmanagementsystem.enums.AccountType;

@@ -1,7 +1,7 @@
 package az.banking.bankmanagementsystem.exception;
 
-public class AccountNotFoundException extends RuntimeException {
+public class AccountNotFoundException extends ApiException {
     public AccountNotFoundException(String message) {
-        super(message);
+        super(message, 404);
     }
 }

@@ -1,13 +1,15 @@
-package az.banking.bankmanagementsystem.service.Account;
-import az.banking.bankmanagementsystem.DTO.Acount.AccountRequest;
-import az.banking.bankmanagementsystem.DTO.Acount.AccountResponse;
+package az.banking.bankmanagementsystem.service.impl;
+
+import az.banking.bankmanagementsystem.DTO.AccountRequest;
+import az.banking.bankmanagementsystem.DTO.AccountResponse;
 import az.banking.bankmanagementsystem.entity.Account;
 import az.banking.bankmanagementsystem.entity.Customer;
 import az.banking.bankmanagementsystem.enums.AccountStatus;
 import az.banking.bankmanagementsystem.enums.Currency;
 import az.banking.bankmanagementsystem.exception.AccountNotFoundException;
 import az.banking.bankmanagementsystem.repository.AccountRepository;
-import az.banking.bankmanagementsystem.service.impl.CustomerService;
+import az.banking.bankmanagementsystem.service.AccountService;
+import az.banking.bankmanagementsystem.service.CustomerService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +21,7 @@ import java.math.BigDecimal;
 @Transactional
 @RequiredArgsConstructor
 @Slf4j
-public class AccountService implements AccountService_interface {
+public class AccountServiceImpl implements AccountService {
 
     private final AccountRepository accountRepository;
     private final CustomerService customerService;
@@ -72,12 +74,12 @@ public class AccountService implements AccountService_interface {
         return accountResponseDTO;
 
     }
+
     @Override
     public Account getAccountByNumber(String accountNumber) {
         return accountRepository.findByAccountNumber(accountNumber).
-                orElseThrow(()->new AccountNotFoundException("Hesab tapilmadi"));
+                orElseThrow(() -> new AccountNotFoundException("Hesab tapilmadi"));
     }
-
 
 
 }

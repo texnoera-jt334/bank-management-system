@@ -4,6 +4,7 @@ import az.banking.bankmanagementsystem.entity.Customer;
 import az.banking.bankmanagementsystem.exception.CustomerAlreadyExistsException;
 import az.banking.bankmanagementsystem.exception.CustomerNotFoundException;
 import az.banking.bankmanagementsystem.repository.CustomerRepository;
+import az.banking.bankmanagementsystem.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
