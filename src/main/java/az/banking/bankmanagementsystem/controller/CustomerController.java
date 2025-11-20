@@ -1,7 +1,7 @@
 package az.banking.bankmanagementsystem.controller;
 
 import az.banking.bankmanagementsystem.entity.Customer;
-import az.banking.bankmanagementsystem.service.CustomerService;
+import az.banking.bankmanagementsystem.service.impl.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @PostMapping
+    @PostMapping("/creatCustomer")
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
         Customer createdCustomer = customerService.createCustomer(customer);
         return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
@@ -85,3 +85,7 @@ public class CustomerController {
         return ResponseEntity.noContent().build();
     }
 }
+
+
+
+
