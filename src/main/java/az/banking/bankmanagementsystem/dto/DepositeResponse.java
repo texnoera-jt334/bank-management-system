@@ -1,11 +1,13 @@
-package az.banking.bankmanagementsystem.DTO;
+package az.banking.bankmanagementsystem.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 public class DepositeResponse {
 
     private String message;

@@ -1,10 +1,14 @@
-package az.banking.bankmanagementsystem.DTO;
+package az.banking.bankmanagementsystem.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class DepositeRequest {
     private String AccountNumber;
     private BigDecimal amount;

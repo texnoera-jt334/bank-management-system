@@ -1,7 +1,7 @@
 package az.banking.bankmanagementsystem.controller;
 
-import az.banking.bankmanagementsystem.DTO.DepositeRequest;
-import az.banking.bankmanagementsystem.DTO.DepositeResponse;
+import az.banking.bankmanagementsystem.dto.DepositeRequest;
+import az.banking.bankmanagementsystem.dto.DepositeResponse;
 import az.banking.bankmanagementsystem.service.impl.TransactionServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TransactionController {
 
     private final TransactionServiceImpl transactionServiceImpl;
+
     @PostMapping("/deposit")//---> input qebul edirik
     public ResponseEntity<DepositeResponse> deposit(
             @Validated @RequestBody DepositeRequest depositRequest) {

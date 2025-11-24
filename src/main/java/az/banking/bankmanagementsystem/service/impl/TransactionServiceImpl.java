@@ -1,7 +1,7 @@
 package az.banking.bankmanagementsystem.service.impl;
 
-import az.banking.bankmanagementsystem.DTO.DepositeResponse;
-import az.banking.bankmanagementsystem.DTO.DepositeRequest;
+import az.banking.bankmanagementsystem.dto.DepositeResponse;
+import az.banking.bankmanagementsystem.dto.DepositeRequest;
 import az.banking.bankmanagementsystem.entity.Account;
 import az.banking.bankmanagementsystem.entity.Transaction;
 import az.banking.bankmanagementsystem.enums.TransactionType;
@@ -91,13 +91,12 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     private DepositeResponse createSuccessResponse(Transaction transaction, BigDecimal newBalance) {
-        DepositeResponse response = new DepositeResponse();
-        response.setMessage("Depozit ugurla tamamlandi");
-        response.setTransactionid(transaction.getId()); // Long ID
-        response.setReferancesNumber(transaction.getReferenceNumber());
-        response.setNewBalance(newBalance);
-        response.setTimestamp(LocalDateTime.now());
-        return response;
+        return DepositeResponse.builder()
+                .transactionid(transaction.getId())
+                .referancesNumber(transaction.getReferenceNumber())
+                .newBalance(newBalance)
+                .timestamp(LocalDateTime.now()).build();
+
     }
 
 }

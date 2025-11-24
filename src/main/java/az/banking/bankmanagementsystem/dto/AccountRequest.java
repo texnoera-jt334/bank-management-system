@@ -1,4 +1,4 @@
-package az.banking.bankmanagementsystem.DTO;
+package az.banking.bankmanagementsystem.dto;
 
 
 import az.banking.bankmanagementsystem.enums.AccountType;
@@ -8,10 +8,12 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
+@NoArgsConstructor
 public class AccountRequest {
 @NotBlank(message = "Hesab nomresi daxil edin")
 @Size(min = 20,max = 20,message = "Yalniz 20 reqemli olmaldir.")

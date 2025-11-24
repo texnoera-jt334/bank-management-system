@@ -1,13 +1,11 @@
 package az.banking.bankmanagementsystem.service;
 
-import az.banking.bankmanagementsystem.DTO.DepositeResponse;
-import az.banking.bankmanagementsystem.DTO.DepositeRequest;
-import org.springframework.stereotype.Service;
+import az.banking.bankmanagementsystem.dto.DepositeResponse;
+import az.banking.bankmanagementsystem.dto.DepositeRequest;
 
-@Service
+
 public interface TransactionService {
 
     DepositeResponse deposit(DepositeRequest depositeRequestDTO);
-
 
 }
