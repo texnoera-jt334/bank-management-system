@@ -1,0 +1,74 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-transactions-table
+      author: elcin
+      changes:
+
+        - createTable:
+            tableName: transactions
+            columns:
+
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: account_number
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: amount
+                  type: NUMERIC(14, 2)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: transaction_type
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: description
+                  type: TEXT
+
+              - column:
+                  name: related_account
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: true
+
+              - column:
+                  name: reference_number
+                  type: VARCHAR(30)
+                  constraints:
+                    unique: true
+                    nullable: true
+
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: transactions
+            baseColumnNames: account_number
+            constraintName: fk_transaction_account
+            referencedTableName: accounts
+            referencedColumnNames: account_number
+            onDelete: CASCADE
+
+        - addForeignKeyConstraint:
+            baseTableName: transactions
+            baseColumnNames: related_account
+            constraintName: fk_transaction_related_account
+            referencedTableName: accounts
+            referencedColumnNames: account_number
+            onDelete: SET NULL

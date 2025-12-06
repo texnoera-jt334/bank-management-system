@@ -1,4 +1,4 @@
-package az.banking.bankmanagementsystem.exception;
+package az.banking.bankmanagementsystem.error.model;
 
 public class ApiException extends RuntimeException {
     private final int statusCode;

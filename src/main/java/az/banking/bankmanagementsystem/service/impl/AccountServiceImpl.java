@@ -7,8 +7,8 @@ import az.banking.bankmanagementsystem.entity.Account;
 import az.banking.bankmanagementsystem.entity.Customer;
 import az.banking.bankmanagementsystem.enums.AccountStatus;
 import az.banking.bankmanagementsystem.enums.Currency;
-import az.banking.bankmanagementsystem.exception.AccountNotFoundException;
-import az.banking.bankmanagementsystem.exception.DuplicateAccountNumberException;
+import az.banking.bankmanagementsystem.error.exception.AccountNotFoundException;
+import az.banking.bankmanagementsystem.error.exception.DuplicateAccountNumberException;
 import az.banking.bankmanagementsystem.repository.AccountRepository;
 import az.banking.bankmanagementsystem.service.AccountService;
 import az.banking.bankmanagementsystem.service.CustomerService;
@@ -35,19 +35,12 @@ import java.util.List;
         @Override
         public AccountResponse creatAccount(AccountRequest request) {
 
-            log.info("Yeni hesab yaradılır: {}", request.getAccountNumber());
-
             // Müştərinin mövcud olub-olmadığını yoxla
             Customer customer = customerService.getCustomerByFinCode(request.getCumtomerFinCode());
 
-        //  Hesab nömrəsinin unikal olub-olmadığını yoxla
-        if (accountRepository.existsByAccountNumber(request.getAccountNumber())) {
-            throw new DuplicateAccountNumberException("Hesab nömrəsi artıq mövcuddur: " + request.getAccountNumber());
-        }
-
         // Yeni hesab yarat
         Account account = Account.builder()
-                .accountNumber(request.getAccountNumber())
+                .accountNumber(generateUniqueAccountNumber())
                 .customer(customer)
                 .balance(request.getInitialBalance() != null ? request.getInitialBalance() : BigDecimal.ZERO)
                 .accountType(request.getAccountType())
@@ -60,6 +53,20 @@ import java.util.List;
 
         return CreatAccountResponse(savedAccount);
     }
+       //Bu usul en performansli ulurdur ortalama 400 min + unic hesab yaratmaq olar
+        private String generateUniqueAccountNumber() {
+            long time = System.nanoTime();        // 1) nanosecond səviyyəsində unikallıq
+            int rand = (int) (Math.random() * 1000000); // 2) əlavə random seed
+
+            String raw = String.valueOf(time) + rand;
+
+            // yalnız rəqəmlərdən ibarət olsun və 20 rəqəmə tamamla
+            return raw.length() >= 20
+                    ? raw.substring(0, 20)
+                    : String.format("%1$-" + 20 + "s", raw).replace(" ", "0");
+        }
+
+
 
     //Musteriye Accountla bagli butun melumati vermemek ucun neticeni AccountResponse ile otur
     private AccountResponse CreatAccountResponse(Account account) {
@@ -74,6 +81,7 @@ import java.util.List;
                .createdAt(account.getCreatedAt()).build();
 
     }//XXXX account-la bagli melumat vermek
+
         @Override
         public AccountSimpleResponse getAccountByNumber(String accountNumber) {
             return accountRepository.findByAccountNumberforUser(accountNumber).

@@ -39,7 +39,7 @@ public class Loan {
     @Column(name = "interest_rate", nullable = false, precision = 5, scale = 2)
     private BigDecimal interestRate;
 
-    @Column(name = "total_amount", precision = 14, scale = 2, insertable = false, updatable = false)
+    @Column(name = "total_amount", precision = 14, scale = 2)
     private BigDecimal totalAmount;
 
     @Column(name = "start_date", nullable = false)

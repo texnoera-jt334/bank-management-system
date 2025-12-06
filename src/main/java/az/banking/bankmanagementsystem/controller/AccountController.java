@@ -3,6 +3,7 @@ import az.banking.bankmanagementsystem.dto.AccountRequest;
 import az.banking.bankmanagementsystem.dto.AccountResponse;
 import az.banking.bankmanagementsystem.dto.AccountSimpleResponse;
 import az.banking.bankmanagementsystem.service.impl.AccountServiceImpl;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,14 +22,14 @@ import java.util.List;
 
         @PostMapping()
         public ResponseEntity<AccountResponse> createAccount(
-                @RequestBody AccountRequest accountRequestDTO) {
+                @Valid @RequestBody AccountRequest accountRequestDTO) {
              AccountResponse account = accountService.creatAccount(accountRequestDTO);
             return new ResponseEntity<>( account,HttpStatus.CREATED);
         }
 
        // hesab melumati
        @GetMapping("/{accountNumber}")
-       public ResponseEntity<AccountSimpleResponse> getAccount(@PathVariable String accountNumber){
+       public ResponseEntity<AccountSimpleResponse> getAccount( @PathVariable String accountNumber){
            AccountSimpleResponse account=accountService.getAccountByNumber(accountNumber);
            return ResponseEntity.ok(account);
        }

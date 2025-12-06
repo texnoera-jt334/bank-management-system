@@ -15,9 +15,6 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 public class AccountRequest {
-@NotBlank(message = "Hesab nomresi daxil edin")
-@Size(min = 20,max = 20,message = "Yalniz 20 reqemli olmaldir.")
-private  String accountNumber;
 
 @NotBlank(message = "Musteri Fin code mutleqdir")
 @Size(min = 7,max = 7, message = "Fin 7 reqemli olmalidir")

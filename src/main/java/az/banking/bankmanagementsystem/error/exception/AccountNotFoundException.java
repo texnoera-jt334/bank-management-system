@@ -1,4 +1,6 @@
-package az.banking.bankmanagementsystem.exception;
+package az.banking.bankmanagementsystem.error.exception;
+
+import az.banking.bankmanagementsystem.error.model.ApiException;
 
 public class AccountNotFoundException extends ApiException {
     public AccountNotFoundException(String message) {

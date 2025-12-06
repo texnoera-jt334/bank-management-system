@@ -17,5 +17,23 @@ spring:
     show-sql: true
     open-in-view: true
 
+  liquibase:
+         change-log: classpath:liquibase/changelog-master.yml
+         enabled: true
+
 server:
   port: 8080
+
+logging:
+    level:
+     root: debug
+
+springdoc:
+  api-docs:
+    path: /api-doc
+  swagger-ui:
+    path: /swagger-ui.html
+
+bank:
+  withdrawal:
+    daily-limit: 5000

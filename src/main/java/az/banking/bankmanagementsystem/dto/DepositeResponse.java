@@ -11,9 +11,8 @@ import java.time.LocalDateTime;
 public class DepositeResponse {
 
     private String message;
-    private long transactionid;
-    private String referancesNumber;
+    private Long transactionId;
+    private String referenceNumber;
     private BigDecimal newBalance;
     private LocalDateTime timestamp;
-
 }

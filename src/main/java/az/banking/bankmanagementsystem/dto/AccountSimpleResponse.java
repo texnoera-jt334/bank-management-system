@@ -1,5 +1,4 @@
 package az.banking.bankmanagementsystem.dto;
-
 import az.banking.bankmanagementsystem.enums.AccountStatus;
 import az.banking.bankmanagementsystem.enums.AccountType;
 import lombok.Builder;
