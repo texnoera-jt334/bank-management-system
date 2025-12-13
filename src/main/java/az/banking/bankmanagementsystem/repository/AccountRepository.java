@@ -1,7 +1,8 @@
 package az.banking.bankmanagementsystem.repository;
 
+import az.banking.bankmanagementsystem.dao.entity.Account;
 import az.banking.bankmanagementsystem.dto.AccountSimpleResponse;
-import az.banking.bankmanagementsystem.entity.Account;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import org.springframework.data.jpa.repository.JpaRepository;

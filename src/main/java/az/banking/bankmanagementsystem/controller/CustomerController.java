@@ -1,6 +1,6 @@
 package az.banking.bankmanagementsystem.controller;
 
-import az.banking.bankmanagementsystem.entity.Customer;
+import az.banking.bankmanagementsystem.dao.entity.Customer;
 import az.banking.bankmanagementsystem.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,7 @@
 package az.banking.bankmanagementsystem.dto;
 
-import az.banking.bankmanagementsystem.entity.Customer;
+
+import az.banking.bankmanagementsystem.dao.entity.Customer;
 import az.banking.bankmanagementsystem.enums.AccountStatus;
 import az.banking.bankmanagementsystem.enums.AccountType;
 import az.banking.bankmanagementsystem.enums.Currency;

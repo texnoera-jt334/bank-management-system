@@ -1,6 +1,7 @@
 package az.banking.bankmanagementsystem.repository;
 
-import az.banking.bankmanagementsystem.entity.Transaction;
+
+import az.banking.bankmanagementsystem.dao.entity.Transaction;
 import az.banking.bankmanagementsystem.enums.TransactionType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

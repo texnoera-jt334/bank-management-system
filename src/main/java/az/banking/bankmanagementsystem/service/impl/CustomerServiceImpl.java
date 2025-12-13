@@ -1,6 +1,6 @@
 package az.banking.bankmanagementsystem.service.impl;
 
-import az.banking.bankmanagementsystem.entity.Customer;
+import az.banking.bankmanagementsystem.dao.entity.Customer;
 import az.banking.bankmanagementsystem.error.exception.CustomerAlreadyExistsException;
 import az.banking.bankmanagementsystem.error.exception.CustomerNotFoundException;
 import az.banking.bankmanagementsystem.repository.CustomerRepository;

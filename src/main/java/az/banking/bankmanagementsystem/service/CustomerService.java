@@ -1,6 +1,6 @@
 package az.banking.bankmanagementsystem.service;
 
-import az.banking.bankmanagementsystem.entity.Customer;
+import az.banking.bankmanagementsystem.dao.entity.Customer;
 
 import java.util.List;
 

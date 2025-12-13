@@ -11,7 +11,6 @@ public interface TransactionService {
 
     DepositeResponse deposit(DepositeRequest depositeRequest);
 
-
     WithdrawalResponse withdraw(WithdrawalRequest withdrawalRequest);
 
 }

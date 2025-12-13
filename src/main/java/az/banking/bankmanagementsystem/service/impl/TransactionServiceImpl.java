@@ -1,10 +1,11 @@
 package az.banking.bankmanagementsystem.service.impl;
+import az.banking.bankmanagementsystem.dao.AccountCasheRespository;
+import az.banking.bankmanagementsystem.dao.entity.Account;
+import az.banking.bankmanagementsystem.dao.entity.Transaction;
 import az.banking.bankmanagementsystem.dto.DepositeResponse;
 import az.banking.bankmanagementsystem.dto.DepositeRequest;
 import az.banking.bankmanagementsystem.dto.WithdrawalRequest;
 import az.banking.bankmanagementsystem.dto.WithdrawalResponse;
-import az.banking.bankmanagementsystem.entity.Account;
-import az.banking.bankmanagementsystem.entity.Transaction;
 import az.banking.bankmanagementsystem.error.exception.*;
 import az.banking.bankmanagementsystem.mapper.TransactionMapper;
 import az.banking.bankmanagementsystem.repository.AccountRepository;
@@ -22,6 +23,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 import java.util.Random;
 import java.util.UUID;
 
@@ -31,10 +33,11 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public   class TransactionServiceImpl implements TransactionService {
 
-
+     private  final AccountCasheRespository accountCasheRespository;
      private final AccountRepository accountRepository;
      private final TransactionRepository transActionRepository;
      private final TransactionMapper transactionMapper;
+
     @Value("${bank.withdrawal.daily-limit}")
     private BigDecimal dailyLimit;
 
@@ -42,10 +45,23 @@ public   class TransactionServiceImpl implements TransactionService {
     @Transactional(isolation = Isolation.READ_COMMITTED)
     public DepositeResponse deposit(DepositeRequest depositeRequest) {
 
-        Account account = accountRepository.findByAccountNumber(
-                depositeRequest.getAccountNumber())
-                .orElseThrow(() -> new TransactionResourceNotFoundException(
-                        "Hesab tapılmadı: " + depositeRequest.getAccountNumber()));
+
+        Account account= accountCasheRespository.read(depositeRequest.getAccountNumber());
+        if (Objects.nonNull(account)) {
+            log.debug("User account from cache");
+           }
+        else {
+
+            account = accountRepository.findByAccountNumber(
+                            depositeRequest.getAccountNumber())
+                    .orElseThrow(() -> new TransactionResourceNotFoundException(
+                            "Hesab tapılmadı: " + depositeRequest.getAccountNumber()));
+
+            log.debug("account read from db:");
+            accountCasheRespository.save(account);
+        }
+
+
 
         // 2. Status yoxla
         if (account.getStatus().equals("Active")) {
@@ -83,10 +99,20 @@ public   class TransactionServiceImpl implements TransactionService {
 
         log.info("Withdrawal emeliyyati basladi : {} ",withdrawalRequest.getAccountNumber());
 
-        Account account= accountRepository.findByAccountNumber(withdrawalRequest.
-                getAccountNumber()).
-                orElseThrow(()->new AccountNotFoundException(
-                        "hesab tapilmadi "+withdrawalRequest.getAccountNumber()));
+        Account account= accountCasheRespository.read(withdrawalRequest.getAccountNumber());
+        if (Objects.nonNull(account)){
+            log.info("User account from cashe --Withdrawal" );
+        }
+
+        else {
+            account = accountRepository.findByAccountNumber(withdrawalRequest.
+                            getAccountNumber()).
+                    orElseThrow(() -> new AccountNotFoundException(
+                            "hesab tapilmadi " + withdrawalRequest.getAccountNumber()));
+
+             log.info("account read from DB- withrawal ");
+             accountCasheRespository.save(account);
+        }
 
         if (account.getStatus().equals("Active")) {
             throw new AccountStatusException( "Hesab aktiv deyil: " + account.getStatus());

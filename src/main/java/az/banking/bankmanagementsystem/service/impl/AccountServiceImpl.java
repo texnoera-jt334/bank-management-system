@@ -1,14 +1,13 @@
 package az.banking.bankmanagementsystem.service.impl;
 
+import az.banking.bankmanagementsystem.dao.entity.Account;
+import az.banking.bankmanagementsystem.dao.entity.Customer;
 import az.banking.bankmanagementsystem.dto.AccountRequest;
 import az.banking.bankmanagementsystem.dto.AccountResponse;
 import az.banking.bankmanagementsystem.dto.AccountSimpleResponse;
-import az.banking.bankmanagementsystem.entity.Account;
-import az.banking.bankmanagementsystem.entity.Customer;
 import az.banking.bankmanagementsystem.enums.AccountStatus;
 import az.banking.bankmanagementsystem.enums.Currency;
 import az.banking.bankmanagementsystem.error.exception.AccountNotFoundException;
-import az.banking.bankmanagementsystem.error.exception.DuplicateAccountNumberException;
 import az.banking.bankmanagementsystem.repository.AccountRepository;
 import az.banking.bankmanagementsystem.service.AccountService;
 import az.banking.bankmanagementsystem.service.CustomerService;

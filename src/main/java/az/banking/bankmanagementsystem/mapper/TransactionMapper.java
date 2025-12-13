@@ -1,10 +1,11 @@
 package az.banking.bankmanagementsystem.mapper;
 
+import az.banking.bankmanagementsystem.dao.entity.Transaction;
 import az.banking.bankmanagementsystem.dto.DepositeRequest;
 import az.banking.bankmanagementsystem.dto.DepositeResponse;
 import az.banking.bankmanagementsystem.dto.WithdrawalRequest;
 import az.banking.bankmanagementsystem.dto.WithdrawalResponse;
-import az.banking.bankmanagementsystem.entity.Transaction;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -15,7 +16,7 @@ import java.math.BigDecimal;
     public interface TransactionMapper {
         TransactionMapper INSTANCE = Mappers.getMapper(TransactionMapper.class);
         // Request  Transaction Entity
-        @Mapping(target = "id", ignore = true)
+        @Mapping(target = "id", ignore = true)//avtomatik artir
         @Mapping(target = "account", ignore = true) // Service'də set olunur
         @Mapping(target = "transactionType", constant = "DEPOSIT")
         //@Mapping(target = "relatedAccount", constant = "null")
