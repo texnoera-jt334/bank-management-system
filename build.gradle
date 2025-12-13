@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.5.6'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'org.liquibase.gradle' version '2.2.2'
 }
 
 group = 'az.banking'
@@ -28,12 +29,29 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
+    //mapstruct
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}"//3 annotasiya-->Mapstruct ile islemek ucun
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+    //DB and Validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'//tfade ede bilmek ucun
     runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.liquibase:liquibase-core:4.24.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+
+    //lombok
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    //swagger
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0")
+
+
+
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
+

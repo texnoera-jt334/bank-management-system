@@ -1,0 +1,62 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-create-loans-table
+      author: elcin
+      changes:
+
+        - createTable:
+            tableName: loans
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: customer_fin_code
+                  type: VARCHAR(7)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_loan_customer
+                    references: customers(fin_code)
+
+              - column:
+                  name: principal
+                  type: DECIMAL(14,2)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: interest_rate
+                  type: DECIMAL(5,2)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: total_amount
+                  type: DECIMAL(14,2)
+
+              - column:
+                  name: start_date
+                  type: DATE
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: end_date
+                  type: DATE
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: status
+                  type: VARCHAR(20)
+                  defaultValue: ACTIVE
+
+              - column:
+                  name: created_at
+                  type: DATE
+                  defaultValueComputed: CURRENT_DATE
