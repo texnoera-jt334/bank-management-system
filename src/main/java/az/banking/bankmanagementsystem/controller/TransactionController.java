@@ -10,10 +10,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/bank/transactions")
@@ -29,6 +26,7 @@ public class TransactionController {
         DepositeResponse response = transactionServiceImpl.deposit(depositRequest);
         return ResponseEntity.ok(response);//input---> class-a oturmek
     }
+
     @PostMapping("/withdraw")
     public ResponseEntity<WithdrawalResponse> withdraw(@Valid @RequestBody WithdrawalRequest withdrawalRequest) {
         WithdrawalResponse response = transactionServiceImpl.withdraw(withdrawalRequest);

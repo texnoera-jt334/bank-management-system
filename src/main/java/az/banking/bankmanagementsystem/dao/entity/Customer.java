@@ -17,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Customer {
+public class                    Customer {
 
     @Id
     @Column(name = "fin_code", length = 7, nullable = false, unique = true)

@@ -22,7 +22,4 @@ public class DepositeRequest {
     private String description; //"ATM depozit", "Kassa" vb.
 
 
-
-
-
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit Result</title>
+</head>
+<body>
+
+<h2>Deposit uğurludur</h2>
+
+<h2>Deposit uğurludur</h2>
+
+<p th:text="'Mesaj: ' + ${response.message}"></p>
+<p th:text="'Transaction ID: ' + ${response.transactionId}"></p>
+<p th:text="'Reference: ' + ${response.referenceNumber}"></p>
+<p th:text="'Yeni balans: ' + ${response.newBalance}"></p>
+<p th:text="'Tarix: ' + ${response.timestamp}"></p>
+
+</body>
+</html>
