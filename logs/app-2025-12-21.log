@@ -1,0 +1,611 @@
+2025-12-21 13:49:06.774 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 13:49:07.057 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 956 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 13:49:07.060 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 13:49:19.114 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 13:49:19.144 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 13:49:21.014 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1815 ms. Found 3 JPA repository interfaces.
+2025-12-21 13:49:21.097 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 13:49:21.102 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 13:49:21.247 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 13:49:21.250 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 13:49:21.251 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 13:49:21.251 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 0 Redis repository interfaces.
+2025-12-21 13:49:31.330 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 13:49:31.420 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 13:49:31.427 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 13:49:31.428 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 13:49:32.019 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 13:49:32.022 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 24710 ms
+2025-12-21 13:49:32.655 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 13:49:39.518 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@79b8ecb
+2025-12-21 13:49:39.548 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 13:49:45.896 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 13:49:46.799 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 13:49:47.670 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 13:49:47.902 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 13:49:48.082 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 13:49:48.230 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 13:49:48.309 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 13:49:50.295 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 13:49:50.762 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 13:49:50.788 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 13:49:50.788 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 13:49:50.789 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 13:49:50.789 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 13:49:50.789 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 13:49:50.790 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 13:49:50.790 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 13:49:51.046 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 13:49:51.055 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 13:49:51.417 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 13:49:51.692 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 13:49:51.910 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 13:49:53.220 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 13:49:53.721 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 13:50:03.089 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 13:50:03.100 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:50:04.829 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 13:50:15.714 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 13:50:15.716 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 13:50:18.651 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 13:50:18.722 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 13:50:18.765 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 82.364 seconds (process running for 87.312)
+2025-12-21 13:51:40.756 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 13:51:40.769 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 13:51:40.832 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 61 ms
+2025-12-21 14:03:53.923 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 14:03:54.106 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 14:03:54.819 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:03:54.913 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:03:54.963 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:04:27.298 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 14:04:27.571 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 17584 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 14:04:27.572 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:04:32.512 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:04:32.518 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:04:33.247 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 703 ms. Found 3 JPA repository interfaces.
+2025-12-21 14:04:33.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:04:33.300 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 14:04:33.372 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:04:33.375 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:04:33.376 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:04:33.377 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2025-12-21 14:04:38.873 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 14:04:38.946 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:04:38.952 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 14:04:38.953 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 14:04:39.233 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 14:04:39.236 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 11530 ms
+2025-12-21 14:04:39.778 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:04:40.578 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@fde487b
+2025-12-21 14:04:40.585 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:04:41.298 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 14:04:41.902 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 14:04:42.577 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 14:04:42.646 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 14:04:42.694 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 14:04:42.739 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 14:04:42.808 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 14:04:43.189 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:04:43.384 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:04:43.409 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 14:04:43.410 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 14:04:43.410 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 14:04:43.410 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 14:04:43.411 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 14:04:43.411 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 14:04:43.411 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 14:04:43.485 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 14:04:43.491 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 14:04:43.708 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:04:43.880 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 14:04:43.987 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:04:44.977 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:04:45.236 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 14:04:50.193 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:04:50.202 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:04:51.039 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 14:04:56.460 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 14:04:56.461 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 14:04:58.084 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:04:58.142 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 14:04:58.174 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 34.069 seconds (process running for 39.511)
+2025-12-21 14:08:48.177 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 14:08:48.183 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 14:08:48.380 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 193 ms
+2025-12-21 14:15:29.391 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 14:15:29.444 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 14:15:29.585 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:15:29.611 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:15:29.630 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:16:00.889 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 14:16:01.138 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 5736 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 14:16:01.141 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:16:05.351 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:16:05.363 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:16:05.905 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 516 ms. Found 3 JPA repository interfaces.
+2025-12-21 14:16:05.950 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:16:05.953 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 14:16:06.009 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:16:06.012 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:16:06.013 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:16:06.013 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2025-12-21 14:16:08.347 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 14:16:08.507 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:16:08.514 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 14:16:08.518 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 14:16:09.143 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 14:16:09.146 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7776 ms
+2025-12-21 14:16:10.011 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:16:11.730 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39acd1f1
+2025-12-21 14:16:11.736 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:16:12.425 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 14:16:12.923 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 14:16:13.566 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 14:16:13.645 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 14:16:13.696 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 14:16:13.726 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 14:16:13.793 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 14:16:14.204 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:16:14.405 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:16:14.428 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 14:16:14.430 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 14:16:14.430 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 14:16:14.431 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 14:16:14.431 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 14:16:14.431 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 14:16:14.432 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 14:16:14.549 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 14:16:14.556 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 14:16:14.808 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:16:14.966 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 14:16:15.076 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:16:15.983 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:16:16.236 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 14:16:21.638 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:16:21.655 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:16:28.514 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 14:16:42.078 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 14:16:42.080 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 14:16:44.755 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:16:45.135 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 14:16:45.199 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 47.128 seconds (process running for 51.077)
+2025-12-21 14:16:53.001 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 14:16:53.001 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 14:16:53.004 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-12-21 14:26:58.643 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 14:26:58.742 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 14:26:59.117 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:26:59.197 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:26:59.238 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:27:46.218 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 14:27:46.861 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 7372 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 14:27:46.867 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:27:58.350 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:27:58.359 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:27:59.378 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 975 ms. Found 3 JPA repository interfaces.
+2025-12-21 14:27:59.454 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:27:59.459 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 14:27:59.550 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:27:59.553 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:27:59.554 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:27:59.555 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2025-12-21 14:28:04.786 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 14:28:04.909 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:28:04.917 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 14:28:04.921 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 14:28:06.221 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 14:28:06.261 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 18808 ms
+2025-12-21 14:28:07.497 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:28:10.466 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75b363c3
+2025-12-21 14:28:10.473 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:28:11.241 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 14:28:11.811 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 14:28:12.398 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 14:28:12.509 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 14:28:12.575 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 14:28:12.617 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 14:28:12.668 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 14:28:13.191 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:28:13.585 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:28:13.619 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 14:28:13.619 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 14:28:13.620 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 14:28:13.620 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 14:28:13.620 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 14:28:13.621 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 14:28:13.621 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 14:28:13.719 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 14:28:13.725 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 14:28:13.990 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:28:14.226 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 14:28:14.335 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:28:15.777 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:28:16.622 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 14:28:22.499 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:28:22.513 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:28:23.794 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 14:28:36.684 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 14:28:36.686 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 14:28:38.459 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:28:38.511 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 14:28:38.540 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 62.08 seconds (process running for 65.516)
+2025-12-21 14:28:39.072 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 14:28:39.073 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 14:28:39.076 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-12-21 14:31:03.018 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 14:31:03.297 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 14:31:03.373 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:31:03.380 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:31:03.389 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:31:24.754 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 14:31:24.891 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 16292 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 14:31:24.893 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:31:27.817 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:31:27.823 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:31:28.354 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 509 ms. Found 3 JPA repository interfaces.
+2025-12-21 14:31:28.392 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 14:31:28.395 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 14:31:28.445 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:31:28.447 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:31:28.448 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 14:31:28.449 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2025-12-21 14:31:30.480 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 14:31:30.544 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:31:30.551 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 14:31:30.553 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 14:31:30.958 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 14:31:30.962 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5890 ms
+2025-12-21 14:31:33.157 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:31:34.072 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7742a276
+2025-12-21 14:31:34.080 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:31:34.722 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 14:31:35.223 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 14:31:35.750 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 14:31:35.801 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 14:31:35.888 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 14:31:35.929 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 14:31:35.981 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 14:31:36.276 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:31:36.480 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 14:31:36.514 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 14:31:36.514 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 14:31:36.515 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 14:31:36.516 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 14:31:36.516 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 14:31:36.516 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 14:31:36.517 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 14:31:36.596 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 14:31:36.601 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 14:31:36.826 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:31:36.994 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 14:31:37.110 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:31:38.048 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:31:38.305 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 14:31:41.981 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:31:41.998 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:31:43.033 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 14:31:48.895 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 14:31:48.897 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 14:31:50.776 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 14:31:50.846 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 14:31:50.889 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 27.753 seconds (process running for 30.719)
+2025-12-21 14:31:56.889 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 14:31:56.890 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 14:31:56.895 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-12-21 15:00:00.480 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 15:00:00.582 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 15:00:01.103 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:00:01.188 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:00:01.230 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:00:26.926 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 15:00:27.106 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 4248 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 15:00:27.109 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:00:31.952 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 15:00:31.961 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:00:32.955 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 955 ms. Found 3 JPA repository interfaces.
+2025-12-21 15:00:33.008 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 15:00:33.012 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 15:00:33.070 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:00:33.074 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:00:33.075 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:00:33.075 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2025-12-21 15:00:36.152 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 15:00:36.200 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 15:00:36.206 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 15:00:36.208 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 15:00:36.470 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 15:00:36.474 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9155 ms
+2025-12-21 15:00:37.015 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:00:37.809 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4db6348b
+2025-12-21 15:00:37.818 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:00:38.648 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 15:00:39.251 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 15:00:39.899 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 15:00:39.975 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 15:00:40.039 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 15:00:40.101 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 15:00:40.278 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 15:00:41.024 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 15:00:41.524 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 15:00:41.556 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 15:00:41.557 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 15:00:41.557 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 15:00:41.557 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 15:00:41.558 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 15:00:41.558 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 15:00:41.558 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 15:00:41.660 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 15:00:41.666 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 15:00:42.071 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:00:42.250 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 15:00:42.411 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:00:43.336 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:00:43.611 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 15:00:47.534 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:00:47.544 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:00:48.477 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 15:01:05.596 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 15:01:05.598 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 15:01:08.530 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 15:01:08.675 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 15:01:08.723 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 43.919 seconds (process running for 46.613)
+2025-12-21 15:01:10.565 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 15:01:10.565 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 15:01:10.570 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-12-21 15:13:24.501 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m46s304ms407µs200ns).
+2025-12-21 15:19:53.738 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 15:19:53.835 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 15:19:54.168 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:19:54.217 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:19:54.243 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:20:24.177 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 15:20:24.471 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 11824 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 15:20:24.473 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:20:28.561 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 15:20:28.565 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:20:29.105 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 516 ms. Found 3 JPA repository interfaces.
+2025-12-21 15:20:29.146 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 15:20:29.149 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 15:20:29.217 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:20:29.220 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:20:29.221 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:20:29.222 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2025-12-21 15:20:31.192 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 15:20:31.226 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 15:20:31.231 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 15:20:31.232 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 15:20:31.433 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 15:20:31.438 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6764 ms
+2025-12-21 15:20:31.916 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:20:32.572 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f112f70
+2025-12-21 15:20:32.576 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:20:33.200 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 15:20:33.790 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 15:20:34.456 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 15:20:34.539 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 15:20:34.631 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 15:20:34.697 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 15:20:34.881 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 15:20:36.063 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 15:20:36.826 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 15:20:36.872 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 15:20:36.873 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 15:20:36.873 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 15:20:36.874 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 15:20:36.874 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 15:20:36.874 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 15:20:36.875 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 15:20:37.140 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 15:20:37.163 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 15:20:37.581 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:20:37.897 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 15:20:38.029 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:20:39.280 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:20:39.578 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 15:20:42.888 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:20:42.896 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:20:43.801 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 15:20:51.573 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 15:20:51.574 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 15:20:53.176 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 15:20:53.231 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 15:20:53.264 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 31.843 seconds (process running for 34.188)
+2025-12-21 15:21:02.917 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 15:21:02.918 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 15:21:02.927 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2025-12-21 15:39:58.537 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m25s840ms650µs200ns).
+2025-12-21 15:40:05.976 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6f112f70 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-12-21 15:40:11.040 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7ef6d882 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-12-21 15:50:45.074 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 15:50:45.168 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 15:50:45.486 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:50:45.537 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:50:45.568 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:51:14.714 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 15:51:14.953 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 7400 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 15:51:14.956 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:51:21.133 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 15:51:21.143 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:51:22.205 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1017 ms. Found 3 JPA repository interfaces.
+2025-12-21 15:51:22.274 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 15:51:22.280 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 15:51:22.368 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:51:22.371 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:51:22.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 15:51:22.375 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
+2025-12-21 15:51:26.185 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 15:51:26.246 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 15:51:26.254 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 15:51:26.256 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 15:51:26.783 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 15:51:26.784 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 11679 ms
+2025-12-21 15:51:27.661 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:51:28.619 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2bb3f39e
+2025-12-21 15:51:28.626 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:51:29.958 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 15:51:33.022 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 15:51:34.655 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 15:51:34.732 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 15:51:34.809 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 15:51:34.887 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 15:51:34.994 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 15:51:36.120 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 15:51:36.457 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 15:51:36.507 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 15:51:36.508 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 15:51:36.509 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 15:51:36.509 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 15:51:36.510 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 15:51:36.510 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 15:51:36.510 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 15:51:36.818 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 15:51:36.894 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 15:51:37.516 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:51:38.062 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 15:51:38.503 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:51:42.762 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:51:44.480 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 15:51:51.760 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:51:51.779 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:51:53.234 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 15:52:02.970 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 15:52:02.975 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 15:52:09.101 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 15:52:09.172 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 15:52:09.208 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 57.118 seconds (process running for 60.188)
+2025-12-21 15:52:18.063 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 15:52:18.064 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 15:52:18.069 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-12-21 16:17:23.788 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' is not supported
+2025-12-21 16:17:35.305 [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' is not supported
+2025-12-21 16:17:45.157 [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' is not supported
+2025-12-21 16:18:25.166 [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' is not supported
+2025-12-21 16:27:33.183 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 16:27:33.242 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 16:27:33.528 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:27:33.584 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 16:27:33.608 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 21:26:11.850 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-21 21:26:11.956 [main] INFO  a.b.b.BankManagementSystemApplication - Starting BankManagementSystemApplication using Java 21.0.8 with PID 15660 (C:\Users\elcin\IdeaProjects\bank-management-system\build\classes\java\main started by elcin in C:\Users\elcin\IdeaProjects\bank-management-system)
+2025-12-21 21:26:11.957 [main] INFO  a.b.b.BankManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 21:26:16.194 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 21:26:16.204 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 21:26:16.916 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 662 ms. Found 3 JPA repository interfaces.
+2025-12-21 21:26:16.966 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 21:26:16.970 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 21:26:17.028 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 21:26:17.030 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 21:26:17.031 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.banking.bankmanagementsystem.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 21:26:17.031 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2025-12-21 21:26:19.655 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 21:26:19.695 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-21 21:26:19.700 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 21:26:19.701 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-12-21 21:26:19.864 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-21 21:26:19.866 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7787 ms
+2025-12-21 21:26:20.231 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 21:26:20.846 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21ea1d9d
+2025-12-21 21:26:20.850 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 21:26:21.443 [main] INFO  liquibase.database - Set default schema name to public
+2025-12-21 21:26:21.888 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/1.0-create-customer-table.yml
+2025-12-21 21:26:22.227 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/2.0-create-account-table.yml
+2025-12-21 21:26:22.260 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/3.0-creat-card-table.yml
+2025-12-21 21:26:22.301 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/4.0-creat-employees-table.yml
+2025-12-21 21:26:22.330 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/5.0-creat-transaction-table.yml
+2025-12-21 21:26:22.364 [main] INFO  liquibase.changelog - Reading resource: liquibase/1/6.0-creat-loans-table.yml
+2025-12-21 21:26:22.690 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 21:26:22.826 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-12-21 21:26:22.836 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-12-21 21:26:22.837 [main] INFO  liquibase.util - Run:                          0
+2025-12-21 21:26:22.837 [main] INFO  liquibase.util - Previously run:               6
+2025-12-21 21:26:22.837 [main] INFO  liquibase.util - Filtered out:                 0
+2025-12-21 21:26:22.837 [main] INFO  liquibase.util - -------------------------------
+2025-12-21 21:26:22.837 [main] INFO  liquibase.util - Total change sets:            6
+2025-12-21 21:26:22.838 [main] INFO  liquibase.util - Update summary generated
+2025-12-21 21:26:22.883 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-12-21 21:26:22.887 [main] INFO  liquibase.command - Command execution complete
+2025-12-21 21:26:23.058 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 21:26:23.165 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-12-21 21:26:23.251 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 21:26:23.928 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 21:26:24.071 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-21 21:26:27.565 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 21:26:27.577 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:26:28.340 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 21:26:31.953 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2025-12-21 21:26:31.954 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-21 21:26:32.835 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-21 21:26:32.869 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-21 21:26:32.895 [main] INFO  a.b.b.BankManagementSystemApplication - Started BankManagementSystemApplication in 22.235 seconds (process running for 24.568)
+2025-12-21 21:27:38.711 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 21:27:38.722 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 21:27:38.763 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 39 ms
+2025-12-21 22:23:12.356 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21 22:23:12.700 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-21 22:23:14.790 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 22:23:14.941 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 22:23:15.052 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

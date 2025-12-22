@@ -14,9 +14,23 @@ import static az.banking.bankmanagementsystem.Security.model.Enum.UserPermission
 @AllArgsConstructor
 public enum UserRole {
 
-    USER(Sets.newHashSet(USERS_BALANCES_READ_TRANSACTION)),
-    EMPLOYER(Sets.newHashSet(USERS_WRITE_DELETE)),
-    LOAN(Sets.newHashSet(USERS_CREDIT_PAYMENT));
+    USER(Set.of(
+            UserPermission.BALANCES_READ,
+            UserPermission.TRANSACTION_READ
+    )),
+
+    EMPLOYER(Set.of(
+            UserPermission.BALANCES_READ,
+            UserPermission.USER_WRITE,
+            UserPermission.USER_DELETE
+    )),
+
+    LOAN(Set.of(
+            UserPermission.BALANCES_READ,
+            UserPermission.CREDIT_INFORMATION,
+            UserPermission.PAYMENT
+    ));
+
     private final Set<UserPermission> userPermissionSet;
 
 
