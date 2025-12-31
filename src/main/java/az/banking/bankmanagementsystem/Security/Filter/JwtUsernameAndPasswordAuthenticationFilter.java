@@ -8,6 +8,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -17,15 +18,17 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import java.io.IOException;
 import java.util.Date;
 
+
+
 public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
    private final AuthenticationManager authenticationManager;
 
+   public JwtUsernameAndPasswordAuthenticationFilter(
+            AuthenticationManager authenticationManager) {
 
-   public JwtUsernameAndPasswordAuthenticationFilter(AuthenticationManager authenticationManager){
-       this.authenticationManager=authenticationManager;
-   }
-
+        this.authenticationManager = authenticationManager;
+    }
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request,
                                                 HttpServletResponse response) throws AuthenticationException {
@@ -37,7 +40,7 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
 
 
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-                    authRequest.getUsername(),
+                    authRequest.getFincode(),
                     authRequest.getPassword()
             );
 

@@ -7,14 +7,25 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum UserPermission {
 
-    BALANCES_READ("balances:read"),
-    TRANSACTION_READ("transaction:read"),
+    // ACCOUNT
+    ACCOUNT_CREATE("account:create"),
+    ACCOUNT_READ("account:read"),//hesablarini gormek
+    // CUSTOMER
+    CUSTOMER_CREATE("customer:create"),
+    CUSTOMER_UPDATE("customer:update"),
+    CUSTOMER_DELETE("customer:delete"),
 
-    USER_WRITE("user:write"),
-    USER_DELETE("user:delete"),
+    // TRANSACTION
+    TRANSACTION_DEPOSIT("transaction:deposit"),
+    TRANSACTION_WITHDRAW("transaction:withdraw"),
+    TRANSACTION_BALANCE("transaction:balance"),
 
-    CREDIT_INFORMATION("credit:information"),
-    PAYMENT("payment");
+    // TELEGRAM / AI / INTEGRATION
+    TELEGRAM_DATA_PUSH("telegram:data"),
+
+    // ADMIN / SYSTEM
+    USER_MANAGE("user:manage");
+
 
 
     private final String permission;

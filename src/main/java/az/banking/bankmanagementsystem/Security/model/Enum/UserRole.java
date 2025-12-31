@@ -10,27 +10,35 @@ import java.util.stream.Collectors;
 
 import static az.banking.bankmanagementsystem.Security.model.Enum.UserPermission.*;
 
+
 @Getter
 @AllArgsConstructor
 public enum UserRole {
-
     USER(Set.of(
-            UserPermission.BALANCES_READ,
-            UserPermission.TRANSACTION_READ
+            ACCOUNT_CREATE,
+            ACCOUNT_READ,              // öz hesablarını görsün
+            TRANSACTION_BALANCE,
+            TRANSACTION_DEPOSIT,
+            TRANSACTION_WITHDRAW
+            )),
+
+    ADMIN(Set.of(
+            USER_MANAGE,
+            CUSTOMER_CREATE,
+            CUSTOMER_UPDATE,
+            CUSTOMER_DELETE,
+            ACCOUNT_CREATE,
+            ACCOUNT_READ,
+            TELEGRAM_DATA_PUSH
     )),
 
-    EMPLOYER(Set.of(
-            UserPermission.BALANCES_READ,
-            UserPermission.USER_WRITE,
-            UserPermission.USER_DELETE
-    )),
 
-    LOAN(Set.of(
-            UserPermission.BALANCES_READ,
-            UserPermission.CREDIT_INFORMATION,
-            UserPermission.PAYMENT
+    MANAGER(Set.of(
+            ACCOUNT_READ,
+            CUSTOMER_CREATE,
+            TRANSACTION_DEPOSIT,
+            TRANSACTION_WITHDRAW
     ));
-
     private final Set<UserPermission> userPermissionSet;
 
 

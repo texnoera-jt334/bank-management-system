@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class UsernameAndPasswordAuthentication {
 
-    private String username;
+    private String Fincode;
     private String password;
 
 }
