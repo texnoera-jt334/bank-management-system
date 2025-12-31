@@ -17,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Customer {
+public class  Customer {
 
     @Id
     @Column(name = "fin_code", length = 7, nullable = false, unique = true)
@@ -37,9 +37,6 @@ public class Customer {
 
     @Column(name = "address", columnDefinition = "TEXT")
     private String address;
-
-    @Column(name = "password_hash", length = 255, nullable = false)
-    private String passwordHash;
 
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;

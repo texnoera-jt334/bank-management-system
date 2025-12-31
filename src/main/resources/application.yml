@@ -1,6 +1,9 @@
 spring:
   application:
     name: bank-management-system
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages
 
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -40,10 +43,11 @@ logging:
 
 springdoc:
   api-docs:
-    path: /api-doc
+    path: /v3/api-docs
   swagger-ui:
     path: /swagger-ui.html
 
 bank:
   withdrawal:
     daily-limit: 5000
+

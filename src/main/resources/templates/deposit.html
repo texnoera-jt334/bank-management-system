@@ -1,0 +1,27 @@
+<!--/*@thymesVar id="depositeRequest" type="az.banking.bankmanagementsystem.dto.DepositeRequest"*/-->
+
+<form th:action="@{/xidmetler/deposit}"
+      th:object="${depositeRequest}"
+      method="post">
+
+    <label>Account Number:</label><br>
+    <input type="text" th:field="*{accountNumber}">
+    <div th:if="${#fields.hasErrors('accountNumber')}"
+         th:errors="*{accountNumber}"></div>
+
+    <br><br>
+
+    <label>Məbləğ:</label><br>
+    <input type="number" step="0.01" th:field="*{amount}">
+    <div th:if="${#fields.hasErrors('amount')}"
+         th:errors="*{amount}"></div>
+
+    <br><br>
+
+    <label>Description:</label><br>
+    <input type="text" th:field="*{description}">
+
+    <br><br>
+
+    <button type="submit">Deposit et</button>
+</form>

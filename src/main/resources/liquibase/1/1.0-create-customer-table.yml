@@ -47,12 +47,6 @@ databaseChangeLog:
                   type: TEXT
 
               - column:
-                  name: password_hash
-                  type: VARCHAR(255)
-                  constraints:
-                    nullable: false
-
-              - column:
                   name: date_of_birth
                   type: DATE
 

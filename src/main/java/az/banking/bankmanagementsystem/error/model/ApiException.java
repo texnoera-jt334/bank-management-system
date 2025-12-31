@@ -1,6 +1,9 @@
 package az.banking.bankmanagementsystem.error.model;
 
+import org.springframework.context.MessageSource;
+
 public class ApiException extends RuntimeException {
+
     private final int statusCode;
 
 

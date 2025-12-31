@@ -1,10 +1,14 @@
 package az.banking.bankmanagementsystem.controller;
 
 import az.banking.bankmanagementsystem.dao.entity.Customer;
+import az.banking.bankmanagementsystem.dto.CustomerCreatRequest;
+import az.banking.bankmanagementsystem.dto.CustomerCreatResponse;
 import az.banking.bankmanagementsystem.service.CustomerService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,8 +25,8 @@ public class CustomerController {
     }
 
         @PostMapping("/creatCustomer")
-    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
-        Customer createdCustomer = customerService.createCustomer(customer);
+    public ResponseEntity<CustomerCreatResponse> createCustomer(@Valid @RequestBody CustomerCreatRequest customerCreatRequest) {
+        CustomerCreatResponse createdCustomer = customerService.createCustomer(customerCreatRequest);
         return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
     }
 
@@ -71,10 +75,6 @@ public class CustomerController {
 
         existingCustomer.setActive(updatedCustomer.isActive());
 
-        if (updatedCustomer.getPasswordHash() != null) {
-            existingCustomer.setPasswordHash(updatedCustomer.getPasswordHash());
-        }
-
         Customer savedCustomer = customerService.updateCustomer(finCode, existingCustomer);
         return ResponseEntity.ok(savedCustomer);
     }
@@ -85,7 +85,4 @@ public class CustomerController {
         return ResponseEntity.noContent().build();
     }
 }
-
-
-
 
