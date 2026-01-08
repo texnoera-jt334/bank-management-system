@@ -7,13 +7,23 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 
-    @Configuration
-    public class RedisConfig {
+        @Configuration
+        public class RedisConfig {
 
             @Bean
             public RedisTemplate<String, Account> redisTemplate(RedisConnectionFactory connectionFactory) {
                 RedisTemplate<String, Account> template = new RedisTemplate<>();
                 template.setConnectionFactory(connectionFactory);
+                 return template;
+                }
+
+
+             @Bean
+             public RedisTemplate<String, Long> redisTemplateToken(RedisConnectionFactory connectionFactory) {
+                RedisTemplate<String, Long> template = new RedisTemplate<>();
+                template.setConnectionFactory(connectionFactory);
                 return template;
             }
-    }
+
+
+        }

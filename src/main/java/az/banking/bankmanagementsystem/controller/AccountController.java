@@ -4,6 +4,7 @@ import az.banking.bankmanagementsystem.dto.AccountResponse;
 import az.banking.bankmanagementsystem.dto.AccountSimpleResponse;
 import az.banking.bankmanagementsystem.service.impl.AccountServiceImpl;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,7 @@ import java.util.List;
 
     @RestController
     @RequestMapping("/api/accounts")
-    @RequiredArgsConstructor
+    @AllArgsConstructor
     public class AccountController {
 
         private final AccountServiceImpl accountService;
