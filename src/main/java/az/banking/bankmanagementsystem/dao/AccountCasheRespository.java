@@ -17,10 +17,8 @@ public class AccountCasheRespository {
 
     private final RedisTemplate<String, Account> redisTemplate;
 
-
     @Value("${cache.redis.account.ttl}")
     Long ttl;
-
     public Account read(String accountNumber) {
 
         return redisTemplate.opsForValue().get(accountNumber);

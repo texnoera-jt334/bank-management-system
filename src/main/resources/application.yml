@@ -33,6 +33,8 @@ cache:
   redis:
     account:
       ttl: 120 #seconds
+    telegram:
+      ttl: 120 #seconds
 
 server:
   port: 8080
@@ -51,3 +53,19 @@ bank:
   withdrawal:
     daily-limit: 5000
 
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN}   # Environment variable tövsiyə olunur
+    username: Springelcin_test_bot
+
+    welcome-message: | 
+      ✅ Salam
+      🏦 MyBank sisteminə xoş gəlmisiniz!
+
+      📱 Telegram hesabınız uğurla əlaqələndirildi.
+
+      🔐 Artıq:
+      • Bütün OTP kodları burada alınacaq
+      • Əməliyyat bildirişləri buraya gələcək
+      • Təhlükəsizlik xəbərdarlıqları burada olacaq
+      ⚠️ Vacib: OTP kodlarını heç kimlə paylaşmayın!

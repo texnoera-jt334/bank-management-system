@@ -31,10 +31,14 @@ public class SecurityConfiguration {
     private static final String[] PUBLIC_URLS = {
             "/",
             "/login",
-            "/api/v1/customers/creatCustomer",
+            "/api/v1/customers",
+            "/api/v1/customers/telegramMessengTest",
             "/api/auth/**",    // Login, Register ??/
              "/api/public/**",//????
             "/telegram/data",
+            //bu endpoint vermesem. Secury icaze vermir telgram sorgu gondersin bu endpointe
+            "/telegram/webhook",
+            "/error",
             // Swagger UI
             "/swagger-ui/**",
             "/swagger-ui.html",

@@ -28,6 +28,11 @@ databaseChangeLog:
                     nullable: false
 
               - column:
+                   name: telegram_chat_id
+                   type: varchar(255)
+
+
+              - column:
                   name: email
                   type: varchar(30)
                   constraints:

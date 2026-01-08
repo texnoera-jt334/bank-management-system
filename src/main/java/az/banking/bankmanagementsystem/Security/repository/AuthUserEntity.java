@@ -26,6 +26,9 @@ public class AuthUserEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Column(name = "telegram_chat_id")
+    private String telegramChatId;
+
     @Column(name = "email")
     private String email;
 

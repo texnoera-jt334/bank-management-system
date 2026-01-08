@@ -1,32 +1,37 @@
 package az.banking.bankmanagementsystem.controller;
 
+import az.banking.bankmanagementsystem.client.FeignTelegramClient;
+import az.banking.bankmanagementsystem.client.dto.TelegramRequestDTO;
+import az.banking.bankmanagementsystem.client.dto.TelegramResponseDTO;
 import az.banking.bankmanagementsystem.dao.entity.Customer;
 import az.banking.bankmanagementsystem.dto.CustomerCreatRequest;
 import az.banking.bankmanagementsystem.dto.CustomerCreatResponse;
 import az.banking.bankmanagementsystem.service.CustomerService;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/v1/customers")
 public class CustomerController {
 
     private final CustomerService customerService;
+    private  final FeignTelegramClient feignClient;
+    @Value("${telegram.bot.welcome-message}")
+    private String welcome;
 
-    @Autowired
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
-    }
-
-        @PostMapping("/creatCustomer")
-    public ResponseEntity<CustomerCreatResponse> createCustomer(@Valid @RequestBody CustomerCreatRequest customerCreatRequest) {
-        CustomerCreatResponse createdCustomer = customerService.createCustomer(customerCreatRequest);
+    @PostMapping
+    public ResponseEntity<CustomerCreatResponse> createCustomer(@Valid @RequestBody CustomerCreatRequest customerCreateRequest) {
+        CustomerCreatResponse createdCustomer = customerService.createCustomer(customerCreateRequest);
         return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
     }
 
@@ -42,6 +47,24 @@ public class CustomerController {
         return ResponseEntity.ok(customers);
     }
 
+    @GetMapping("/telegramMessengTest")
+    public ResponseEntity<TelegramResponseDTO> SpringTelegramMesseng() {
+        TelegramRequestDTO requestDTO =
+                TelegramRequestDTO.builder()
+                        .chatId("1775046847")
+                        .text(welcome)
+                        .parseMode("HTML")
+                        .build();
+
+        //telegrama Messenger gonderirem.
+
+        TelegramResponseDTO responseDTO = feignClient.sendMessage(requestDTO);
+
+        log.info(" Telegram mesajı göndərildi | chatId={} | ok={}",
+                requestDTO.getChatId(), responseDTO.isOk());
+
+        return ResponseEntity.ok(responseDTO);
+    }
     @PutMapping("/{finCode}")
     public ResponseEntity<Customer> updateCustomer(
             @PathVariable String finCode,
